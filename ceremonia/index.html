@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Ceremonia de ayahuasca con la comunidad Tsáchila, 6 de noviembre de 2026 en Santo Domingo. Programa, requisitos de seguridad, preguntas frecuentes y registro. Máximo 10 cupos.">
+<meta property="og:title" content="Noche de Ayahuasca Tsáchila · 6 nov 2026">
+<meta property="og:description" content="Una noche en la Caverna del Chamán con la comunidad Tsáchila. Máximo 10 cupos.">
+<meta property="og:image" content="https://tsachila.com/ceremonia/media/hero.jpg">
+<meta property="og:url" content="https://tsachila.com/ceremonia/">
+<link rel="canonical" href="https://tsachila.com/ceremonia/">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Noche de Ayahuasca Tsáchila</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: cinematic full-bleed bands (video hero, photo strip) alternating with a narrow reading column; achiote red as the single accent */
+:root{
+  --night:#0b110d; --leaf:#141e18; --moss:#1d2a22; --line:#2e4035;
+  --bone:#f1eadf; --mist:#a7b3a9; --achiote:#e4572e; --achiote-soft:#3b1d12;
+  --ok:#7fc79a; --stop:#ff7a6b;
+  --display:"Gloock", Georgia, serif; --body:"Figtree", system-ui, sans-serif; --mono:"JetBrains Mono", ui-monospace, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--bone);font-family:var(--body);font-size:16px;line-height:1.6;padding-bottom:76px}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.col{max-width:760px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;line-height:1.08;margin:0}
+h2{font-size:clamp(30px,6vw,44px)}
+h3{font-size:21px}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--achiote)}
+.muted{color:var(--mist)}
+section.blk{padding-block:56px}
+section.blk > .col{display:grid;gap:18px}
+.rule{border-top:1px solid var(--line)}
+a{color:var(--achiote)}
+:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;min-height:clamp(560px,86svh,860px);display:flex;align-items:flex-end;background:#000}
+.hero video,.hero .still{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,17,13,.35) 0%,rgba(11,17,13,.15) 35%,rgba(11,17,13,.85) 75%,var(--night) 100%)}
+.hero-in{position:relative;z-index:1;width:100%;padding-block:40px 36px}
+.hero-in .col{display:grid;gap:18px}
+.hero h1{font-size:clamp(46px,11vw,96px);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--achiote)}
+.hero .lede{font-size:18px;max-width:52ch;color:#ddd5c8}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.fact{border:1px solid rgba(241,234,223,.25);border-radius:999px;padding:6px 14px;font-size:14px;background:rgba(11,17,13,.55);backdrop-filter:blur(6px)}
+.fact b{font-family:var(--mono);font-weight:500}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cta{display:inline-flex;align-items:center;gap:8px;background:var(--achiote);color:#1a0b05;font-weight:700;text-decoration:none;padding:14px 22px;border-radius:999px;border:0;font-size:16px;cursor:pointer;font-family:var(--body);transition:transform .15s}
+.cta:hover{transform:translateY(-1px)}
+.ghost{background:transparent;color:var(--bone);border:1px solid var(--line)}
+.price-tag{font-family:var(--display);font-size:40px;color:var(--bone);line-height:1}
+.price-tag small{font-family:var(--body);font-size:14px;color:var(--mist);margin-left:6px}
+
+/* PHOTO STRIP */
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:min(78vw,420px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+.strip figure{margin:0;scroll-snap-align:start;display:grid;gap:8px}
+.strip img{width:100%;max-width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;display:block}
+.strip figcaption{font-size:14px;color:var(--mist)}
+.strip figcaption b{color:var(--bone);font-weight:600;display:block}
+.strip-wrap{max-width:1200px;margin:0 auto}
+.hint{font-family:var(--mono);font-size:12px;color:var(--mist)}
+
+/* PROGRAM */
+.prog{display:grid;gap:28px}
+@media (min-width:860px){.prog{grid-template-columns:1fr 340px;align-items:start}.prog .side{position:sticky;top:24px}}
+.prog .side img{width:100%;max-width:100%;border-radius:14px;aspect-ratio:3/4;object-fit:cover}
+.tl{list-style:none;margin:0;padding:0;display:grid}
+.tl li{display:grid;grid-template-columns:72px 1fr;gap:14px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.tl time{font-family:var(--mono);font-size:14px;color:var(--achiote);padding-top:2px;font-variant-numeric:tabular-nums}
+.tl strong{display:block;font-weight:600}
+.tl span{color:var(--mist);font-size:15px}
+.tl li.key{background:linear-gradient(90deg,var(--achiote-soft),transparent);border-radius:10px;padding-inline:12px;margin-inline:-12px;border-bottom-color:transparent}
+.day{display:grid;gap:4px}
+.day + .day{margin-top:18px}
+
+/* FILM */
+.film{display:grid;gap:22px;align-items:center}
+@media (min-width:760px){.film{grid-template-columns:320px 1fr}}
+.film video{width:100%;max-width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:18px;background:var(--leaf);box-shadow:0 30px 60px -30px rgba(228,87,46,.35)}
+.film .txt{display:grid;gap:16px;min-width:0}
+
+/* QUOTE BAND */
+.band{position:relative;overflow:hidden}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--night) 10%,rgba(11,17,13,.4))}
+.band .col{position:relative;z-index:1;padding-block:80px}
+.band blockquote{margin:0;font-family:var(--display);font-size:clamp(26px,5vw,40px);line-height:1.2;max-width:22ch}
+
+/* CARDS / LISTS */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.card{background:var(--leaf);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:10px;align-content:start;min-width:0}
+.card ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.card.stop{border-color:color-mix(in srgb,var(--stop) 45%,var(--line))}
+.card.stop h3{color:var(--stop)}
+.card.ok h3{color:var(--ok)}
+.check{display:grid;gap:8px}
+.check label{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;background:var(--leaf);border:1px solid var(--line);border-radius:12px;cursor:pointer}
+.check input{accent-color:var(--achiote);width:20px;height:20px;margin-top:2px;flex:none}
+.bar{height:6px;background:var(--moss);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--achiote);width:0;transition:width .3s}
+.progress{font-family:var(--mono);font-size:13px;color:var(--mist)}
+
+.faq{display:grid;gap:8px}
+.faq details{background:var(--leaf);border:1px solid var(--line);border-radius:12px;padding:0 18px}
+.faq summary{cursor:pointer;padding:15px 0;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--achiote);font-family:var(--mono)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding-bottom:16px;color:var(--mist)}
+
+.q{display:grid;gap:10px}
+.qrow{display:grid;gap:10px;padding:15px;background:var(--leaf);border:1px solid var(--line);border-radius:12px}
+.yn{display:flex;gap:8px}
+.yn button{flex:1;padding:10px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--bone);font:inherit;cursor:pointer}
+.yn button[aria-pressed="true"].si{background:var(--achiote-soft);border-color:var(--stop);color:var(--stop)}
+.yn button[aria-pressed="true"].no{background:#14281c;border-color:var(--ok);color:var(--ok)}
+.verdict{padding:16px 18px;border-radius:12px;font-weight:600}
+.verdict.pass{background:#14281c;color:var(--ok);border:1px solid var(--ok)}
+.verdict.fail{background:var(--achiote-soft);color:var(--stop);border:1px solid var(--stop)}
+.verdict.wait{background:var(--leaf);color:var(--mist);border:1px solid var(--line)}
+.notice{background:var(--leaf);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;gap:14px}
+.bank{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px;margin:0}
+.bank dt{color:var(--mist)}
+.bank dd{margin:0;font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+form{display:grid;gap:14px}
+.field{display:grid;gap:6px}
+.field label{font-weight:600;font-size:14px}
+.field input,.field textarea,.field select{width:100%;background:var(--leaf);border:1px solid var(--line);color:var(--bone);border-radius:10px;padding:12px;font:inherit}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.agree{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.agree input{accent-color:var(--achiote);width:20px;height:20px;flex:none;margin-top:2px}
+.err{color:var(--stop);font-size:14px;min-height:1em}
+.out{display:grid;gap:10px}
+.out pre{white-space:pre-wrap;background:var(--leaf);border:1px solid var(--line);border-radius:12px;padding:14px;font-family:var(--mono);font-size:13px;margin:0;overflow-x:auto}
+
+/* STICKY BOOKING BAR */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(11,17,13,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding-block:10px calc(10px + env(safe-area-inset-bottom,0px))}
+.dock .col{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1000px}
+.dock .meta{font-size:14px;line-height:1.3}
+.dock .meta b{font-family:var(--display);font-size:22px;font-weight:400;color:var(--bone)}
+.dock .cta{padding:11px 18px}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.tier{border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:6px;background:var(--leaf);position:relative}
+.tier .nm{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
+.tier .pr{font-family:var(--display);font-size:44px;line-height:1}
+.tier .dt{font-size:14px;color:var(--mist)}
+.tier.now{border-color:var(--achiote);background:linear-gradient(160deg,var(--achiote-soft),var(--leaf) 70%)}
+.tier.now .nm{color:var(--achiote)}
+.tier.now::after{content:"Precio de hoy";position:absolute;top:14px;right:14px;font-size:12px;font-weight:700;background:var(--achiote);color:#1a0b05;padding:3px 9px;border-radius:99px}
+.tier.past{opacity:.45}
+.tier.past .pr{text-decoration:line-through}
+.seats{display:grid;gap:8px}
+.seat-row{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.seat-row i{height:10px;border-radius:99px;background:var(--moss)}
+.seat-row i.taken{background:var(--achiote)}
+.countdown{font-family:var(--mono);font-size:14px;color:var(--bone);background:var(--leaf);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-variant-numeric:tabular-nums}
+.closed{padding:20px;border-radius:14px;border:1px solid var(--stop);background:var(--achiote-soft);color:var(--bone)}
+.notice h3{font-size:19px}
+footer{color:var(--mist);font-size:13px;padding-block:32px}
+@media (prefers-reduced-motion:reduce){.hero video{display:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:no-preference){.hero-in .col > *{animation:rise .8s ease both}.hero-in .col > *:nth-child(2){animation-delay:.1s}.hero-in .col > *:nth-child(3){animation-delay:.2s}.hero-in .col > *:nth-child(4){animation-delay:.3s}@keyframes rise{from{transform:translateY(10px)}to{transform:none}}}
+</style>
+</head>
+<body>
+
+
+<header class="hero">
+  <img class="still" src="media/hero.jpg" alt="">
+  <video src="media/ceremonia.mp4" poster="media/hero.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+  <div class="hero-in gut">
+    <div class="col">
+      <p class="eyebrow">Retiro de sanación · Comunidad Tsáchila · Santo Domingo</p>
+      <h1>Una noche con la <em>ayahuasca</em> en la Caverna del Chamán</h1>
+      <p class="lede">Ceremonia guiada por Tsapiny (Henrry Calazacón) y el chamán mayor de la comunidad. La noche se filma para el documental Tsáchila: te entrevistamos antes y después.</p>
+      <div class="facts">
+        <span class="fact">Vie <b>6 nov</b> → Sáb <b>7 nov</b></span>
+        <span class="fact">Solo <b>5 a 10</b> cupos</span>
+        <span class="fact">Mayores de <b>18</b></span>
+      </div>
+      <div class="cta-row">
+        <a class="cta" href="#registro">Ver si puedo ir y reservar</a>
+        <span class="price-tag"><span data-price>$77</span><small data-tiername>precio pionero</small></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="blk" aria-labelledby="h-lugar">
+  <div class="col gut"><p class="eyebrow">El lugar</p><h2 id="h-lugar">Así se vive la noche</h2>
+  <p class="muted">Fotos y video grabados por Carlos Becerra en la comunidad. Desliza para ver más.</p></div>
+  <div class="strip-wrap gut" style="margin-top:22px">
+    <div class="strip" tabindex="0" aria-label="Galería de fotos">
+      <figure><img src="media/choza.jpg" alt="Tsáchila con achiote frente a una choza de paja" loading="lazy"><figcaption><b>Bienvenida</b>Te recibe la comunidad en su territorio.</figcaption></figure>
+      <figure><img src="media/maloka.jpg" alt="Interior de la casa ceremonial con luz entrando por el techo" loading="lazy"><figcaption><b>La casa ceremonial</b>Aquí es la ceremonia y aquí duerme la mayoría.</figcaption></figure>
+      <figure><img src="media/molienda.jpg" alt="Manos moliendo plantas sobre una piedra" loading="lazy"><figcaption><b>La preparación</b>Ayahuasca con chacruna, preparada frente a ti.</figcaption></figure>
+      <figure><img src="media/ceremonia.jpg" alt="Altar de piedras, velas y frutas en el centro ceremonial" loading="lazy"><figcaption><b>El altar</b>Fuego, piedras, velas y frutas del territorio.</figcaption></figure>
+      <figure><img src="media/noche.jpg" alt="Chamán junto al fuego en la noche" loading="lazy"><figcaption><b>La noche</b>Ícaros, tambor y el chamán mayor.</figcaption></figure>
+      <figure><img src="media/poster.jpg" alt="Sendero en la selva de la comunidad" loading="lazy"><figcaption><b>La selva</b>Senderos hacia la cascada del sábado.</figcaption></figure>
+    </div>
+    <p class="hint">← desliza →</p>
+  </div>
+</section>
+
+<section class="blk rule" aria-labelledby="h-precio" id="precios">
+  <div class="col gut">
+    <p class="eyebrow">Precio por fecha de inscripción</p>
+    <h2 id="h-precio">Mientras antes te inscribes, menos pagas</h2>
+    <p class="muted">Incluye ceremonia, alojamiento en cabaña, fogata, baño de cascada y desayuno. El precio sube en cada fecha y las inscripciones cierran el miércoles 4 de noviembre a las 23:59, o antes si se llenan los 10 cupos.</p>
+    <div class="tiers" id="tiers"></div>
+    <div class="seats">
+      <div class="seat-row" id="seats" aria-hidden="true"></div>
+      <p class="progress" id="seatsTxt"></p>
+    </div>
+    <p class="countdown" id="countdown" role="status"></p>
+  </div>
+</section>
+
+<section class="blk rule" aria-labelledby="h-prog">
+  <div class="col gut" style="max-width:1100px">
+    <div class="prog">
+      <div>
+        <p class="eyebrow">Programa</p>
+        <h2 id="h-prog" style="margin-block:8px 18px">Cómo es la noche</h2>
+        <div class="day">
+          <h3>Viernes 6 de noviembre</h3>
+          <ol class="tl">
+            <li><time>Llegada</time><div><strong>Bienvenida</strong><span>Recibimiento del jefe líder de la comunidad Tsáchila. Instalación en la cabaña.</span></div></li>
+            <li><time>16:00</time><div><strong>Integración</strong><span>Conoce al grupo y al equipo.</span></div></li>
+            <li><time>17:00</time><div><strong>Preparación de la ayahuasca con chacruna</strong><span>Explicación, consejos y orientación.</span></div></li>
+            <li><time>18:00</time><div><strong>Té del chamán</strong></div></li>
+            <li><time>18:45</time><div><strong>Fogata</strong><span>Historias, música e ícaros: canto ancestral Tsáchila.</span></div></li>
+            <li><time>19:45</time><div><strong>Centro ceremonial</strong><span>Caverna del Chamán.</span></div></li>
+            <li class="key"><time>20:00</time><div><strong>Ceremonia en la Casa de Ayahuasca</strong><span>Ritos del chamán mayor. Sueño de ayahuasca, mensaje para tu sanación, paz y tranquilidad.</span></div></li>
+            <li><time>00:00</time><div><strong>Tambor del chamán</strong><span>Medianoche.</span></div></li>
+          </ol>
+        </div>
+        <div class="day">
+          <h3>Sábado 7 de noviembre</h3>
+          <ol class="tl">
+            <li><time>07:30</time><div><strong>Cascada</strong><span>Hidroterapia y baño de purificación.</span></div></li>
+            <li><time>08:15</time><div><strong>Desayuno y testimonios</strong><span>Aquí grabamos tu entrevista del "después".</span></div></li>
+          </ol>
+        </div>
+      </div>
+      <div class="side"><img src="media/noche.jpg" alt="Chamán Tsáchila de noche junto al fuego" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk rule" aria-labelledby="h-film">
+  <div class="col gut" style="max-width:1000px">
+    <div class="film">
+      <video src="media/teaser.mp4" poster="media/teaser.jpg" controls playsinline preload="metadata" aria-label="Teaser del documental Tsáchila"></video>
+      <div class="txt">
+        <p class="eyebrow">El documental</p>
+        <h2 id="h-film">Vas a ser parte de la historia</h2>
+        <p class="muted">Estamos filmando un documental sobre los últimos chamanes Tsáchila. Esta ceremonia es su capítulo final: personas que toman ayahuasca por primera vez, antes y después.</p>
+        <div class="cta-row">
+          <a class="cta ghost" href="https://photos.google.com/share/AF1QipNTX8R6fEMvwpXsqJdXDq7sCx8OHg9jzzi-se8Z5J8l1kANNTu2njBM2zOI705ZQg?key=Zzd4eGhraWdoZk9DR0FiSVlSd1ZDemhRVkhOSjZB" target="_blank" rel="noopener">Ver álbum completo ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-hidden="false">
+  <img src="media/maloka.jpg" alt="">
+  <div class="col gut"><blockquote>Una sola noche. Máximo diez personas. Una medicina que se respeta.</blockquote></div>
+</section>
+
+<section class="blk" aria-labelledby="h-who">
+  <div class="col gut">
+    <p class="eyebrow">Seguridad primero</p>
+    <h2 id="h-who">Quién puede ir y quién no</h2>
+    <p class="muted">La ayahuasca contiene DMT y alcaloides que actúan como inhibidores de la MAO. Combinada con ciertos medicamentos puede causar síndrome serotoninérgico o crisis de presión arterial, que son emergencias médicas. Por eso estas reglas no son negociables.</p>
+    <div class="cols">
+      <div class="card stop">
+        <h3>No puedes participar si</h3>
+        <ul>
+          <li>Tomas antidepresivos (ISRS, IRSN, tricíclicos, IMAO), litio, tramadol o medicamentos para migraña tipo triptanes.</li>
+          <li>Tomas anfetaminas, metilfenidato, o usas cocaína u otros estimulantes.</li>
+          <li>Tienes o tuviste esquizofrenia, psicosis o trastorno bipolar, o un familiar directo los tiene.</li>
+          <li>Tienes enfermedad del corazón, presión alta no controlada o epilepsia.</li>
+          <li>Estás embarazada o en lactancia.</li>
+          <li>Eres menor de 18 años.</li>
+        </ul>
+      </div>
+      <div class="card ok">
+        <h3>Importante sobre medicamentos</h3>
+        <ul>
+          <li>No dejes ningún medicamento por tu cuenta para poder venir. Suspender un antidepresivo sin control médico es peligroso, y algunos tardan semanas en salir del cuerpo.</li>
+          <li>Si tomas cualquier medicamento recetado, consúltalo con tu médico y avísanos en el formulario.</li>
+          <li>Si tienes dudas, no vengas a esta fecha. Habrá otras.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk rule" aria-labelledby="h-diet">
+  <div class="col gut">
+    <p class="eyebrow">Preparación</p>
+    <h2 id="h-diet">Tu checklist antes de llegar</h2>
+    <div class="bar" aria-hidden="true"><i id="barfill"></i></div>
+    <p class="progress" id="progress">0 de 0 listos</p>
+    <div class="check" id="checklist">
+      <label><input type="checkbox" id="c1"><span><b>Desde el miércoles 4:</b> sin alcohol ni drogas.</span></label>
+      <label><input type="checkbox" id="c2"><span><b>Desde el jueves 5:</b> sin carne roja, embutidos, quesos maduros, salsa de soya ni alimentos fermentados.</span></label>
+      <label><input type="checkbox" id="c3"><span><b>Desde el jueves 5:</b> sin relaciones sexuales.</span></label>
+      <label><input type="checkbox" id="c4"><span><b>Viernes 6:</b> comida ligera y temprano; no comer desde el mediodía.</span></label>
+      <label><input type="checkbox" id="c5"><span>Revisé mis medicamentos con mi médico (o no tomo ninguno).</span></label>
+      <label><input type="checkbox" id="c6"><span>Empaqué ropa blanca (si tienes), toalla y artículos de aseo para el baño de purificación.</span></label>
+      <label><input type="checkbox" id="c7"><span>Llevo linterna, repelente, una chompa abrigada, poncho de lluvia y agua.</span></label>
+      <label><input type="checkbox" id="c8"><span>Pagué mi cupo y guardé el comprobante.</span></label>
+    </div>
+  </div>
+</section>
+
+<section class="blk rule" aria-labelledby="h-faq" id="faq">
+  <div class="col gut">
+    <p class="eyebrow">Preguntas frecuentes</p>
+    <h2 id="h-faq">Lo que todos preguntan</h2>
+    <div class="faq">
+      <details><summary>¿Quién no debe tomar ayahuasca?</summary>
+        <p>Nadie que tome antidepresivos (ISRS, IRSN, tricíclicos, IMAO), litio, tramadol, triptanes o estimulantes; nadie con antecedente personal o familiar directo de psicosis, esquizofrenia o trastorno bipolar; nadie con enfermedad cardíaca, presión alta no controlada o epilepsia; embarazadas, mujeres en lactancia y menores de 18. La ayahuasca bloquea una enzima (la MAO) y mezclada con esos medicamentos puede causar emergencias médicas. Aplica para todos, sin excepción. Si tienes dudas, el test de abajo te lo dice.</p></details>
+      <details><summary>¿Cuánta ayahuasca me dan?</summary>
+        <p>La cantidad la decide el chamán para cada persona según su peso, su experiencia y cómo lo ve esa noche. Nadie toma por su cuenta ni pide más de lo que él sirve. Si es tu primera vez, díselo.</p></details>
+      <details><summary>¿Cómo me preparo?</summary>
+        <p>Sigue el checklist de esta página: sin alcohol ni drogas desde el miércoles, sin carne roja ni alimentos fermentados desde el jueves, sin relaciones sexuales desde el jueves y en ayunas desde el mediodía del viernes. Llega descansado, con la intención clara de por qué vienes. Si tomas cualquier medicamento, revísalo con tu médico antes; no lo suspendas por tu cuenta.</p></details>
+      <details><summary>¿Qué como antes?</summary>
+        <p>Comida simple: arroz, granos, verduras, frutas, pollo o pescado a la plancha, poca sal y poco aceite. Evita carne roja, embutidos, quesos maduros, salsa de soya, enlatados, alimentos fermentados, alcohol, café en exceso y chocolate. Estos alimentos contienen tiramina, que con la ayahuasca puede subir la presión. El viernes come ligero y temprano; no hay cena antes de la ceremonia. El desayuno del sábado está incluido.</p></details>
+      <details><summary>¿Qué me pongo?</summary>
+        <p>Ropa blanca si tienes, si no la que tengas: cómoda, suelta y de algodón. Para la noche, una chompa o buzo abrigado. Para el baño de purificación, traje de baño o ropa que se pueda mojar, toalla y artículos de aseo.</p></details>
+      <details><summary>¿Cómo es el clima?</summary>
+        <p>Santo Domingo es cálido y húmedo: de día unos 24 a 28 °C y de noche baja a unos 18 a 20 °C. Puede llover en cualquier momento, así que trae un impermeable o poncho de lluvia y repelente para mosquitos.</p></details>
+      <details><summary>¿Uso zapatos?</summary>
+        <p>Trae zapatos cerrados con buena suela para caminar de noche hacia la caverna y por el sendero a la cascada, que es resbaloso. Trae también sandalias que se quiten fácil. Dentro de la casa ceremonial sigue la indicación del chamán.</p></details>
+      <details><summary>¿Qué pasa si estoy en mi ciclo menstrual?</summary>
+        <p>Cada tradición lo maneja distinto. Avísanos en el formulario y lo coordinamos con Tsapiny antes de la ceremonia, para que sepas con tiempo cómo se hace en esta comunidad.</p></details>
+      <details><summary>¿Es normal vomitar o sentirse mal?</summary>
+        <p>Sí. La purga (vómito, a veces diarrea) es parte del proceso y se espera. Tendrás un balde junto a ti. El equipo y el chamán acompañan a todos durante la noche. Si algo te asusta, quédate en tu lugar y pide ayuda; no salgas solo de la casa ceremonial.</p></details>
+      <details><summary>¿Qué se siente? ¿Qué molestias puede haber?</summary>
+        <p>Los efectos empiezan entre 30 y 60 minutos después de tomar y duran unas 4 a 6 horas. En el cuerpo puedes sentir náusea, vómito, diarrea, sudor, escalofríos, mareo y el corazón más acelerado. En la mente puedes ver imágenes con los ojos cerrados, revivir recuerdos y sentir emociones fuertes: miedo, tristeza, llanto, y también calma, alivio o alegría. Las molestias pasan; respirar lento y quedarte en tu lugar ayuda.</p></details>
+      <details><summary>¿Se puede perder la conciencia?</summary>
+        <p>Normalmente no. Sigues consciente, sabes dónde estás y después recuerdas casi todo, aunque la percepción del tiempo y del cuerpo cambia mucho. El riesgo real es marearte o desmayarte al pararte de golpe después de vomitar. Por eso no te levantes rápido y pide que alguien te acompañe si necesitas ir al baño.</p></details>
+      <details><summary>¿Me van a filmar?</summary>
+        <p>Sí. Te entrevistamos antes de la ceremonia y después, en el desayuno del sábado, para el documental sobre la comunidad Tsáchila. Para participar tienes que aceptar la filmación.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="blk rule" aria-labelledby="h-elig" id="registro">
+  <div class="col gut">
+    <p class="eyebrow">Paso 1 de 3</p>
+    <h2 id="h-elig">¿Puedes participar?</h2>
+    <div class="q" id="quiz"></div>
+    <div class="verdict wait" id="verdict" role="status">Responde las 6 preguntas.</div>
+  </div>
+</section>
+
+<section class="blk rule" aria-labelledby="h-pay" id="pago" hidden>
+  <div class="col gut">
+    <p class="eyebrow">Paso 2 de 3</p>
+    <h2 id="h-pay">Reserva tu cupo con <span data-price>$77</span></h2>
+    <div class="notice" id="ppBox" hidden>
+      <h3>Con tarjeta de crédito o débito</h3>
+      <p class="muted">Pago seguro con PayPhone. Guarda el comprobante que te llega.</p>
+      <div class="cta-row"><a class="cta" id="ppLink" href="#" target="_blank" rel="noopener">Pagar <span data-price>$77</span> con PayPhone ↗</a></div>
+    </div>
+    <div class="notice">
+      <h3>Con transferencia bancaria</h3>
+      <dl class="bank">
+        <dt>Banco</dt><dd>Banco Pichincha</dd>
+        <dt>Cuenta</dt><dd>5930782300</dd>
+        <dt>Titular</dt><dd>Henrry Calazacón</dd>
+        <dt>Monto</dt><dd data-price-full>$77,00</dd>
+      </dl>
+      <div class="cta-row"><button class="cta ghost" type="button" id="copyAcc">Copiar número de cuenta</button></div>
+    </div>
+    <p class="muted">El precio que pagas es el de la fecha en que pagas, no el de la fecha en que llenas el formulario.</p>
+    <p class="muted">El cupo se confirma cuando recibimos el comprobante. Máximo 10 personas, por orden de pago.</p>
+  </div>
+</section>
+
+<section class="blk rule" aria-labelledby="h-form" id="formsec" hidden>
+  <div class="col gut">
+    <p class="eyebrow">Paso 3 de 3</p>
+    <h2 id="h-form">Tus datos</h2>
+    <form id="form" novalidate>
+      <div class="two">
+        <div class="field"><label for="nombre">Nombre completo</label><input id="nombre" required autocomplete="name"></div>
+        <div class="field"><label for="edad">Edad</label><input id="edad" type="number" min="18" max="99" required inputmode="numeric"></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="wa">WhatsApp</label><input id="wa" required inputmode="tel" placeholder="09…"></div>
+        <div class="field"><label for="ciudad">Ciudad</label><input id="ciudad" required></div>
+      </div>
+      <div class="field"><label for="meds">Medicamentos que tomas (o "ninguno")</label><input id="meds" required></div>
+      <div class="field"><label for="salud">Condiciones de salud, alergias, ciclo menstrual o algo que debamos saber</label><textarea id="salud" rows="2"></textarea></div>
+      <div class="field"><label for="exp">¿Has tomado ayahuasca antes?</label>
+        <select id="exp"><option>Es mi primera vez</option><option>Sí, una vez</option><option>Sí, varias veces</option></select></div>
+      <div class="field"><label for="por">¿Por qué quieres vivir esta ceremonia?</label><textarea id="por" rows="2"></textarea></div>
+      <div class="field"><label for="ref">Número de comprobante (PayPhone o transferencia)</label><input id="ref" required></div>
+      <label class="agree"><input type="checkbox" id="a1"><span>Autorizo ser filmado/a y entrevistado/a antes y después de la ceremonia, y el uso de mi imagen y voz en el documental y sus promociones.</span></label>
+      <label class="agree"><input type="checkbox" id="a2"><span>Declaro que la información de salud y medicamentos es verdadera y que participo de forma voluntaria y bajo mi responsabilidad.</span></label>
+      <p class="err" id="err" role="alert"></p>
+      <div><button class="cta" type="submit">Generar mi registro</button></div>
+    </form>
+    <div class="out" id="out" hidden>
+      <p>Envía este registro y la foto del comprobante por WhatsApp a Ney Torres para confirmar tu cupo.</p>
+      <pre id="msg"></pre>
+      <div class="cta-row"><button class="cta" type="button" id="copyMsg">Copiar registro</button></div>
+    </div>
+  </div>
+</section>
+
+<footer class="gut"><div class="col">Retiro con la comunidad Tsáchila · Documental Tsáchila · 2026 · Fotos y video: Carlos Becerra</div></footer>
+
+<nav class="dock gut" aria-label="Reserva">
+  <div class="col">
+    <div class="meta"><b data-price>$77</b> · 6 nov<br><span class="muted" id="dockNote">Máximo 10 cupos</span></div>
+    <a class="cta" href="#registro" id="dockCta">Reservar</a>
+  </div>
+</nav>
+
+<script>
+/* ===== PRECIOS ESCALONADOS (hora de Ecuador, UTC-5) =====
+   Para actualizar: cambia CUPOS_TOMADOS cuando alguien pague,
+   y pega los links de PayPhone de cada tarifa. */
+const CUPOS_TOTAL = 10;
+const CUPOS_TOMADOS = 0;
+const TIERS = [
+  {id:'pionero',  name:'Pionero',        price:77,  until:'2026-10-25T23:59:59-05:00', label:'hasta el dom 25 oct', payphone:''},
+  {id:'regular',  name:'Regular',        price:97,  until:'2026-11-01T23:59:59-05:00', label:'26 oct al dom 1 nov', payphone:''},
+  {id:'ultimo',   name:'Último llamado', price:117, until:'2026-11-04T23:59:59-05:00', label:'2 al mié 4 nov', payphone:''}
+];
+let CURRENT = null;
+(function pricing(){
+  const now = Date.now();
+  const idx = TIERS.findIndex(t => now <= Date.parse(t.until));
+  const full = CUPOS_TOMADOS >= CUPOS_TOTAL;
+  const closed = idx === -1 || full;
+  CURRENT = closed ? null : TIERS[idx];
+  // tier cards
+  const box = document.getElementById('tiers');
+  TIERS.forEach((t,i)=>{
+    const d=document.createElement('div');
+    d.className='tier'+(i===idx&&!closed?' now':'')+((idx===-1||i<idx)?' past':'');
+    d.innerHTML='<span class="nm">'+t.name+'</span><span class="pr">$'+t.price+'</span><span class="dt">'+t.label+'</span>';
+    box.appendChild(d);
+  });
+  // seats
+  const sr=document.getElementById('seats');
+  for(let i=0;i<CUPOS_TOTAL;i++){const s=document.createElement('i');if(i<CUPOS_TOMADOS)s.className='taken';sr.appendChild(s);}
+  const libres=Math.max(0,CUPOS_TOTAL-CUPOS_TOMADOS);
+  document.getElementById('seatsTxt').textContent = CUPOS_TOMADOS===0 ? 'Cupos disponibles: '+CUPOS_TOTAL+' de '+CUPOS_TOTAL : libres+' cupos libres de '+CUPOS_TOTAL;
+  if(closed){
+    document.querySelectorAll('[data-price]').forEach(e=>e.textContent='Cerrado');
+    document.querySelectorAll('[data-tiername]').forEach(e=>e.textContent=full?'cupos llenos':'inscripciones cerradas');
+    document.getElementById('countdown').textContent = full ? 'Se llenaron los 10 cupos. Gracias.' : 'Las inscripciones cerraron el 4 de noviembre.';
+    const reg=document.getElementById('registro');
+    reg.querySelector('.col').innerHTML='<p class="eyebrow">Inscripciones</p><h2>Inscripciones cerradas</h2><div class="closed">'+(full?'Se llenaron los 10 cupos para esta ceremonia.':'La fecha límite para inscribirse fue el miércoles 4 de noviembre.')+' Escríbenos si quieres estar en la próxima.</div>';
+    document.getElementById('dockNote').textContent=full?'Cupos llenos':'Inscripciones cerradas';
+    document.getElementById('dockCta').textContent='Ver detalles';
+    return;
+  }
+  document.querySelectorAll('[data-price]').forEach(e=>e.textContent='$'+CURRENT.price);
+  document.querySelectorAll('[data-price-full]').forEach(e=>e.textContent='$'+CURRENT.price+',00');
+  document.querySelectorAll('[data-tiername]').forEach(e=>e.textContent='precio '+CURRENT.name.toLowerCase());
+  document.getElementById('dockNote').textContent=libres+' de '+CUPOS_TOTAL+' cupos libres';
+  if(CURRENT.payphone){const pp=document.getElementById('ppBox');pp.hidden=false;document.getElementById('ppLink').href=CURRENT.payphone;}
+  // countdown
+  const next = TIERS[idx+1];
+  const cd=document.getElementById('countdown');
+  function tick(){
+    const ms=Date.parse(CURRENT.until)-Date.now();
+    if(ms<=0){location.reload();return;}
+    const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
+    const left=(d?d+' d ':'')+h+' h '+m+' min';
+    cd.textContent = next ? 'El precio sube a $'+next.price+' en '+left : 'Las inscripciones cierran en '+left;
+  }
+  tick(); setInterval(tick,30000);
+})();
+
+/* Hero video: hide still once playing */
+(function(){const v=document.querySelector('.hero video'),s=document.querySelector('.hero .still');if(!v)return;v.addEventListener('playing',()=>{s.hidden=true;});})();
+
+/* Checklist with per-viewer memory */
+(function(){
+  const boxes=[...document.querySelectorAll('#checklist input')];const p=document.getElementById('progress');const bar=document.getElementById('barfill');
+  let saved={};try{saved=JSON.parse(localStorage.getItem('ck')||'{}')}catch(e){}
+  boxes.forEach(b=>{b.checked=!!saved[b.id];b.addEventListener('change',()=>{saved[b.id]=b.checked;try{localStorage.setItem('ck',JSON.stringify(saved))}catch(e){}upd();});});
+  function upd(){const n=boxes.filter(b=>b.checked).length;p.textContent=n+' de '+boxes.length+' listos';bar.style.width=(n/boxes.length*100)+'%';}
+  upd();
+})();
+
+/* Eligibility */
+const QS=[
+ '¿Tomas antidepresivos, litio, tramadol, triptanes o estimulantes?',
+ '¿Tienes o tuviste psicosis, esquizofrenia o trastorno bipolar, o un familiar directo los tiene?',
+ '¿Tienes enfermedad del corazón, presión alta no controlada o epilepsia?',
+ '¿Estás embarazada o en lactancia?',
+ '¿Eres menor de 18 años?',
+ '¿Usaste cocaína, anfetaminas u otras drogas en las últimas dos semanas?'
+];
+const ans=new Array(QS.length).fill(null);
+(function(){
+  const quiz=document.getElementById('quiz');
+  if(!quiz)return;
+  QS.forEach((q,i)=>{
+    const r=document.createElement('div');r.className='qrow';
+    r.innerHTML='<span>'+q+'</span><div class="yn"><button type="button" class="si" aria-pressed="false">Sí</button><button type="button" class="no" aria-pressed="false">No</button></div>';
+    const [si,no]=r.querySelectorAll('button');
+    si.onclick=()=>{ans[i]=true;si.setAttribute('aria-pressed','true');no.setAttribute('aria-pressed','false');verdict();};
+    no.onclick=()=>{ans[i]=false;no.setAttribute('aria-pressed','true');si.setAttribute('aria-pressed','false');verdict();};
+    quiz.appendChild(r);
+  });
+})();
+function verdict(){
+  const v=document.getElementById('verdict');const pay=document.getElementById('pago');const fs=document.getElementById('formsec');
+  if(ans.some(a=>a===true)){v.className='verdict fail';v.textContent='Por tu seguridad no puedes participar en esta ceremonia. No es un juicio: es una combinación con riesgo médico real.';pay.hidden=true;fs.hidden=true;return;}
+  if(ans.some(a=>a===null)){v.className='verdict wait';v.textContent='Responde las '+ans.filter(a=>a===null).length+' preguntas que faltan.';pay.hidden=true;fs.hidden=true;return;}
+  v.className='verdict pass';v.textContent='Puedes participar. Sigue con el pago y tus datos.';pay.hidden=false;fs.hidden=false;
+}
+
+async function copy(text,btn,ok){
+  try{await navigator.clipboard.writeText(text);btn.textContent=ok;}
+  catch(e){btn.textContent='Selecciona y copia manualmente';}
+}
+document.getElementById('copyAcc').onclick=e=>copy('5930782300',e.currentTarget,'Número copiado');
+
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const g=id=>document.getElementById(id);const err=g('err');
+  const req=['nombre','edad','wa','ciudad','meds','ref'];
+  const miss=req.find(id=>!g(id).value.trim());
+  if(miss){err.textContent='Falta completar: '+g(miss).previousElementSibling.textContent+'.';g(miss).focus();return;}
+  if(+g('edad').value<18){err.textContent='Debes tener 18 años o más.';return;}
+  if(!g('a1').checked||!g('a2').checked){err.textContent='Marca las dos autorizaciones para continuar.';return;}
+  err.textContent='';
+  const t=['REGISTRO · Ayahuasca Tsáchila · 6 nov 2026',
+   'Nombre: '+g('nombre').value.trim(),'Edad: '+g('edad').value,'WhatsApp: '+g('wa').value.trim(),'Ciudad: '+g('ciudad').value.trim(),
+   'Medicamentos: '+g('meds').value.trim(),'Salud: '+(g('salud').value.trim()||'—'),'Experiencia: '+g('exp').value,
+   'Motivo: '+(g('por').value.trim()||'—'),
+   'Tarifa: '+(CURRENT?CURRENT.name+' $'+CURRENT.price:'—'),'Comprobante: '+g('ref').value.trim(),
+   'Autorizo filmación y uso de imagen: Sí','Declaración de salud verdadera: Sí','Requisitos de seguridad: cumple los 6'].join('\n');
+  g('msg').textContent=t;g('out').hidden=false;g('out').scrollIntoView({behavior:'smooth',block:'start'});
+  g('copyMsg').onclick=ev=>copy(t,ev.currentTarget,'Registro copiado');
+});
+</script>
+
+</body>
+</html>
