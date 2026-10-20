@@ -173,6 +173,15 @@ form{display:grid;gap:14px}
 @media (max-width:420px){.hero-tiers .tier .nm{font-size:10px;letter-spacing:.06em}}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .field input[type=file]{padding:10px}
+.urgbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--achiote);color:#1a0b05;padding-block:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:var(--achiote)}
+.urg-in{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:10px 16px;flex-wrap:wrap;font-weight:600}
+.urg-lbl{font-size:14px}
+.urg-clock{display:inline-flex;align-items:baseline;gap:2px;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.urg-clock b{font-size:20px;font-weight:500;background:#1a0b05;color:var(--bone);border-radius:6px;padding:2px 7px;min-width:2.1em;text-align:center}
+.urg-clock i{font-style:normal;font-size:12px;margin:0 6px 0 3px}
+.urg-cta{background:#1a0b05;color:var(--bone);text-decoration:none;font-size:13px;padding:6px 12px;border-radius:999px}
+@media (max-width:420px){.urg-cta{display:none}.urg-clock b{font-size:17px;padding:2px 5px}}
 .closed{padding:20px;border-radius:14px;border:1px solid var(--stop);background:var(--achiote-soft);color:var(--bone)}
 .notice h3{font-size:19px}
 footer{color:var(--mist);font-size:13px;padding-block:32px}
@@ -183,6 +192,13 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
 <body>
 
 
+<div class="urgbar gut" id="urgbar" role="timer" aria-live="off">
+  <div class="urg-in">
+    <span class="urg-lbl" id="urgLbl">Precio de $77 termina en</span>
+    <span class="urg-clock" id="urgClock"><b id="ud">0</b><i>d</i><b id="uh">00</b><i>h</i><b id="um">00</b><i>m</i><b id="us">00</b><i>s</i></span>
+    <a class="urg-cta" href="#registro">Reservar</a>
+  </div>
+</div>
 <header class="hero">
   <img class="still" src="media/hero.jpg" alt="">
   <video src="media/ceremonia.mp4" poster="media/hero.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
@@ -601,6 +617,7 @@ let CURRENT = null;
     reg.querySelector('.col').innerHTML='<p class="eyebrow">Inscripciones</p><h2>Inscripciones cerradas</h2><div class="closed">'+(full?'Se llenaron los 10 cupos para esta ceremonia.':'La fecha límite para inscribirse fue el miércoles 4 de noviembre.')+' Escríbenos si quieres estar en la próxima.</div>';
     document.getElementById('dockNote').textContent=full?'Cupos llenos':'Inscripciones cerradas';
     document.getElementById('dockCta').textContent='Ver detalles';
+    document.getElementById('urgbar').hidden=true;
     return;
   }
   document.querySelectorAll('[data-price]').forEach(e=>e.textContent='$'+CURRENT.price);
@@ -621,6 +638,17 @@ let CURRENT = null;
     const dn=document.getElementById('dockNote'); if(dn) dn.textContent = next ? 'Sube a $'+next.price+' en '+left : 'Cierra en '+left;
   }
   tick(); setInterval(tick,30000);
+  const pad=n=>String(n).padStart(2,'0');
+  document.getElementById('urgLbl').textContent = next ? 'Precio de $'+CURRENT.price+' termina en' : 'Inscripciones cierran en';
+  function utick(){
+    const ms=Math.max(0,Date.parse(CURRENT.until)-Date.now());
+    document.getElementById('ud').textContent=Math.floor(ms/864e5);
+    document.getElementById('uh').textContent=pad(Math.floor(ms%864e5/36e5));
+    document.getElementById('um').textContent=pad(Math.floor(ms%36e5/6e4));
+    document.getElementById('us').textContent=pad(Math.floor(ms%6e4/1e3));
+    if(ms<=0)location.reload();
+  }
+  utick(); setInterval(utick,1000);
 })();
 
 /* Hero video: hide still once playing */
