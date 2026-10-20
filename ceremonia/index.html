@@ -508,27 +508,13 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
     <p class="eyebrow">Paso 2 de 3</p>
     <h2 id="h-pay">Reserva tu cupo con <span data-price>$77</span></h2>
     <div class="notice" id="ppBox" hidden>
-      <h3>Con tarjeta de crédito o débito</h3>
-      <p class="muted">Pago seguro con PayPhone. Guarda el comprobante que te llega.</p>
+      <h3>Paga con tarjeta de crédito o débito</h3>
+      <p class="muted">Pago seguro con PayPhone. Se abre en otra pestaña: cuando termines, toma captura del comprobante y vuelve aquí para el paso 3.</p>
       <div class="cta-row"><a class="cta" id="ppLink" href="#" target="_blank" rel="noopener">Pagar <span data-price>$77</span> con PayPhone ↗</a></div>
-    </div>
-    <div class="notice">
-      <h3>Con transferencia bancaria</h3>
-      <dl class="bank">
-        <dt>Banco</dt><dd>Banco Pichincha</dd>
-        <dt>Tipo de cuenta</dt><dd>Ahorros</dd>
-        <dt>Número</dt><dd>2208637646</dd>
-        <dt>Titular</dt><dd>Ney José Torres Hurtado</dd>
-        <dt>Cédula</dt><dd>1712486677</dd>
-        <dt>Email</dt><dd>facturasneytorres@gmail.com</dd>
-        <dt>Monto</dt><dd data-price-full>$77,00</dd>
-      </dl>
-      <div class="cta-row"><button class="cta ghost" type="button" id="copyAcc">Copiar número de cuenta</button><button class="cta ghost" type="button" id="copyAll">Copiar todos los datos</button></div>
-      <p class="muted" style="font-size:14px">Si tu banco lo pide, pon el email facturasneytorres@gmail.com para que le llegue la copia del pago.</p>
     </div>
     <p class="muted"><b>El precio no incluye transporte.</b> Cada persona llega por su cuenta a Santo Domingo; te enviamos la ubicación por WhatsApp.</p>
     <p class="muted">El precio que pagas es el de la fecha en que pagas, no el de la fecha en que llenas el formulario.</p>
-    <p class="muted">Haz la transferencia y toma captura de pantalla del comprobante. La subes en el paso 3. El cupo se confirma cuando lo verificamos. Máximo 10 personas, por orden de pago.</p>
+    <p class="muted">Toma captura de pantalla del comprobante de PayPhone. La subes en el paso 3. El cupo se confirma cuando lo verificamos. Máximo 10 personas, por orden de pago.</p>
   </div>
 </section>
 
@@ -550,8 +536,8 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
       <div class="field"><label for="exp">¿Has tomado ayahuasca antes?</label>
         <select id="exp"><option>Es mi primera vez</option><option>Sí, una vez</option><option>Sí, varias veces</option></select></div>
       <div class="field"><label for="por">¿Por qué quieres vivir esta ceremonia?</label><textarea id="por" rows="2"></textarea></div>
-      <div class="field"><label for="comp">Captura del comprobante de transferencia (foto o PDF, máx. 5 MB)</label><input id="comp" type="file" accept="image/*,application/pdf" required></div>
-      <div class="field"><label for="ref">Número de comprobante (opcional)</label><input id="ref"></div>
+      <div class="field"><label for="comp">Captura del comprobante de pago (foto o PDF, máx. 5 MB)</label><input id="comp" type="file" accept="image/*,application/pdf" required></div>
+      <div class="field"><label for="ref">Número de transacción de PayPhone (opcional)</label><input id="ref"></div>
       <div class="hp" aria-hidden="true"><label for="website">No llenar</label><input id="website" tabindex="-1" autocomplete="off"></div>
       <label class="agree"><input type="checkbox" id="a1"><span>Autorizo ser filmado/a y entrevistado/a antes y después de la ceremonia, y el uso de mi imagen y voz en el documental y sus promociones.</span></label>
       <label class="agree"><input type="checkbox" id="a2"><span>Declaro que la información de salud y medicamentos es verdadera y que participo de forma voluntaria y bajo mi responsabilidad.</span></label>
@@ -696,8 +682,6 @@ async function copy(text,btn,ok){
   try{await navigator.clipboard.writeText(text);btn.textContent=ok;}
   catch(e){btn.textContent='Selecciona y copia manualmente';}
 }
-document.getElementById('copyAcc').onclick=e=>copy('2208637646',e.currentTarget,'Número copiado');
-document.getElementById('copyAll').onclick=e=>copy('Banco Pichincha\nCuenta de ahorros 2208637646\nTitular: Ney José Torres Hurtado\nCédula: 1712486677\nEmail: facturasneytorres@gmail.com',e.currentTarget,'Datos copiados');
 
 const REG_URL='https://akbxnksjaehugmbeacws.supabase.co/functions/v1/tsachila-registro';
 document.getElementById('form').addEventListener('submit',async e=>{
@@ -708,7 +692,7 @@ document.getElementById('form').addEventListener('submit',async e=>{
   if(miss){err.textContent='Falta completar: '+g(miss).previousElementSibling.textContent+'.';g(miss).focus();return;}
   if(+g('edad').value<18){err.textContent='Debes tener 18 años o más.';return;}
   const f=g('comp').files[0];
-  if(!f){err.textContent='Sube la captura del comprobante de transferencia.';g('comp').focus();return;}
+  if(!f){err.textContent='Sube la captura del comprobante de pago.';g('comp').focus();return;}
   if(f.size>5*1024*1024){err.textContent='La captura pesa más de 5 MB. Toma otra captura o recórtala.';return;}
   if(!g('a1').checked||!g('a2').checked){err.textContent='Marca las dos autorizaciones para continuar.';return;}
   err.textContent='';
