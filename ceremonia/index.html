@@ -171,6 +171,8 @@ form{display:grid;gap:14px}
 .hero-tiers .tier.now::after{top:auto;bottom:10px;right:10px;font-size:10px;padding:2px 7px;content:"Hoy"}
 .hero-cd{max-width:640px;background:rgba(20,30,24,.78);backdrop-filter:blur(6px)}
 @media (max-width:420px){.hero-tiers .tier .nm{font-size:10px;letter-spacing:.06em}}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.field input[type=file]{padding:10px}
 .closed{padding:20px;border-radius:14px;border:1px solid var(--stop);background:var(--achiote-soft);color:var(--bone)}
 .notice h3{font-size:19px}
 footer{color:var(--mist);font-size:13px;padding-block:32px}
@@ -188,7 +190,7 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
     <div class="col">
       <p class="eyebrow">Retiro de sanación · Comunidad Tsáchila · Santo Domingo</p>
       <h1>Una noche con la <em>ayahuasca</em> en la Caverna del Chamán</h1>
-      <p class="lede">Ceremonia guiada por Tsapiny (Henrry Calazacón) y el chamán mayor de la comunidad. La noche se filma para el documental Tsáchila: te entrevistamos antes y después.</p>
+      <p class="lede">Ceremonia guiada por el chamán mayor de la comunidad Tsáchila, en plena selva. No es un retiro de hotel ni es para cualquiera: es el capítulo final de un documental, y tú sales en él.</p>
       <div class="facts">
         <span class="fact">Vie <b>6 nov</b> → Sáb <b>7 nov</b></span>
         <span class="fact">Solo <b>5 a 10</b> cupos</span>
@@ -287,7 +289,87 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
   <div class="col gut"><blockquote>Una sola noche. Máximo diez personas. Una medicina que se respeta.</blockquote></div>
 </section>
 
-<section class="blk" aria-labelledby="h-who">
+<section class="blk" aria-labelledby="h-para">
+  <div class="col gut">
+    <p class="eyebrow">Antes de seguir</p>
+    <h2 id="h-para">Esto no es para cualquiera</h2>
+    <div class="cols">
+      <div class="card">
+        <h3>Es para ti si</h3>
+        <ul>
+          <li>Buscas una experiencia real y aceptas que puede ser dura: purga, miedo, llanto, cansancio.</li>
+          <li>Puedes dormir en el suelo de la selva, con insectos, humedad y sin comodidades de ciudad.</li>
+          <li>Estás dispuesto a contar en cámara qué sentías antes y qué cambió después.</li>
+          <li>Respetas las reglas del chamán y de la comunidad toda la noche.</li>
+        </ul>
+      </div>
+      <div class="card stop">
+        <h3>No vengas si</h3>
+        <ul>
+          <li>Buscas una fiesta, un "viaje" recreativo o un spa.</li>
+          <li>No quieres aparecer en un documental.</li>
+          <li>Necesitas cama, baño privado o señal de celular para estar tranquilo.</li>
+          <li>Tienes alguna de las contraindicaciones médicas de abajo.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk rule" aria-labelledby="h-selva">
+  <div class="col gut">
+    <p class="eyebrow">Expectativas claras</p>
+    <h2 id="h-selva">Esto es la selva</h2>
+    <p class="muted">La ceremonia es en territorio de la comunidad Tsáchila, en Santo Domingo. Todo es rústico. Mejor saberlo hoy que descubrirlo allá.</p>
+    <div class="cols">
+      <div class="card">
+        <h3>Dónde duermes</h3>
+        <ul>
+          <li>La mayoría duerme dentro de la casa ceremonial, en el suelo, cerca del fuego. Es lo que la gente prefiere durante el proceso.</li>
+          <li>También hay alojamiento en cabaña compartida. No hay habitaciones privadas.</li>
+          <li>Trae sleeping bag o cobija, una almohada pequeña y una esterilla o colchoneta delgada.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Cómo es el lugar</h3>
+        <ul>
+          <li>Calor húmedo de día, fresco de noche, lluvia posible en cualquier momento.</li>
+          <li>Mosquitos e insectos: repelente y manga larga.</li>
+          <li>Baños básicos y compartidos. Caminos de tierra que de noche se recorren con linterna.</li>
+          <li>Poca o ninguna señal de celular. Avisa a tu familia antes de llegar.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk rule" aria-labelledby="h-cam">
+  <div class="col gut">
+    <p class="eyebrow">El documental</p>
+    <h2 id="h-cam">Vas a salir en cámara</h2>
+    <p class="muted">Esta ceremonia es el capítulo final del documental sobre la comunidad Tsáchila. Participar significa aceptar que te filmemos. No hay versión sin cámaras.</p>
+    <div class="cols">
+      <div class="card">
+        <h3>Qué grabamos</h3>
+        <ul>
+          <li><b>Antes:</b> una entrevista corta el viernes por la tarde: quién eres, por qué viniste, qué esperas.</li>
+          <li><b>Durante:</b> la preparación, la fogata y la ceremonia, con cámaras de poca luz. Sin flash ni luces fuertes que interrumpan.</li>
+          <li><b>Después:</b> tu testimonio el sábado en el desayuno: qué viviste y qué cambió.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Cómo te cuidamos</h3>
+        <ul>
+          <li>El equipo es pequeño: dos personas de cámara y los presentadores.</li>
+          <li>La cámara nunca está por encima de la ceremonia: si el chamán pide parar, se para.</li>
+          <li>Antes de entrar firmas una autorización de uso de imagen y voz.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk rule" aria-labelledby="h-who">
   <div class="col gut">
     <p class="eyebrow">Seguridad primero</p>
     <h2 id="h-who">Quién puede ir y quién no</h2>
@@ -355,7 +437,7 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
       <details><summary>¿Uso zapatos?</summary>
         <p>Trae zapatos cerrados con buena suela para caminar de noche hacia la caverna y por el sendero a la cascada, que es resbaloso. Trae también sandalias que se quiten fácil. Dentro de la casa ceremonial sigue la indicación del chamán.</p></details>
       <details><summary>¿Qué pasa si estoy en mi ciclo menstrual?</summary>
-        <p>Cada tradición lo maneja distinto. Avísanos en el formulario y lo coordinamos con Tsapiny antes de la ceremonia, para que sepas con tiempo cómo se hace en esta comunidad.</p></details>
+        <p>Cada tradición lo maneja distinto. Avísanos en el formulario y lo coordinamos con el chamán antes de la ceremonia, para que sepas con tiempo cómo se hace en esta comunidad.</p></details>
       <details><summary>¿Es normal vomitar o sentirse mal?</summary>
         <p>Sí. La purga (vómito, a veces diarrea) es parte del proceso y se espera. Tendrás un balde junto a ti. El equipo y el chamán acompañan a todos durante la noche. Si algo te asusta, quédate en tu lugar y pide ayuda; no salgas solo de la casa ceremonial.</p></details>
       <details><summary>¿Qué se siente? ¿Qué molestias puede haber?</summary>
@@ -363,7 +445,7 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
       <details><summary>¿Se puede perder la conciencia?</summary>
         <p>Normalmente no. Sigues consciente, sabes dónde estás y después recuerdas casi todo, aunque la percepción del tiempo y del cuerpo cambia mucho. El riesgo real es marearte o desmayarte al pararte de golpe después de vomitar. Por eso no te levantes rápido y pide que alguien te acompañe si necesitas ir al baño.</p></details>
       <details><summary>¿Me van a filmar?</summary>
-        <p>Sí. Te entrevistamos antes de la ceremonia y después, en el desayuno del sábado, para el documental sobre la comunidad Tsáchila. Para participar tienes que aceptar la filmación.</p></details>
+        <p>Sí, es condición para participar. Grabamos una entrevista antes (viernes por la tarde), la ceremonia con cámaras de poca luz y sin flash, y tu testimonio después (sábado en el desayuno). Firmas una autorización de uso de imagen y voz.</p></details>
     </div>
   </div>
 </section>
@@ -390,14 +472,15 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
       <h3>Con transferencia bancaria</h3>
       <dl class="bank">
         <dt>Banco</dt><dd>Banco Pichincha</dd>
-        <dt>Cuenta</dt><dd>5930782300</dd>
-        <dt>Titular</dt><dd>Henrry Calazacón</dd>
+        <dt>Tipo</dt><dd>Ahorros</dd>
+        <dt>Cuenta</dt><dd>2208637646</dd>
+        <dt>Titular</dt><dd>Ney José Torres Hurtado</dd>
         <dt>Monto</dt><dd data-price-full>$77,00</dd>
       </dl>
       <div class="cta-row"><button class="cta ghost" type="button" id="copyAcc">Copiar número de cuenta</button></div>
     </div>
     <p class="muted">El precio que pagas es el de la fecha en que pagas, no el de la fecha en que llenas el formulario.</p>
-    <p class="muted">El cupo se confirma cuando recibimos el comprobante. Máximo 10 personas, por orden de pago.</p>
+    <p class="muted">Haz la transferencia y toma captura de pantalla del comprobante. La subes en el paso 3. El cupo se confirma cuando lo verificamos. Máximo 10 personas, por orden de pago.</p>
   </div>
 </section>
 
@@ -419,14 +502,16 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
       <div class="field"><label for="exp">¿Has tomado ayahuasca antes?</label>
         <select id="exp"><option>Es mi primera vez</option><option>Sí, una vez</option><option>Sí, varias veces</option></select></div>
       <div class="field"><label for="por">¿Por qué quieres vivir esta ceremonia?</label><textarea id="por" rows="2"></textarea></div>
-      <div class="field"><label for="ref">Número de comprobante (PayPhone o transferencia)</label><input id="ref" required></div>
+      <div class="field"><label for="comp">Captura del comprobante de transferencia (foto o PDF, máx. 5 MB)</label><input id="comp" type="file" accept="image/*,application/pdf" required></div>
+      <div class="field"><label for="ref">Número de comprobante (opcional)</label><input id="ref"></div>
+      <div class="hp" aria-hidden="true"><label for="website">No llenar</label><input id="website" tabindex="-1" autocomplete="off"></div>
       <label class="agree"><input type="checkbox" id="a1"><span>Autorizo ser filmado/a y entrevistado/a antes y después de la ceremonia, y el uso de mi imagen y voz en el documental y sus promociones.</span></label>
       <label class="agree"><input type="checkbox" id="a2"><span>Declaro que la información de salud y medicamentos es verdadera y que participo de forma voluntaria y bajo mi responsabilidad.</span></label>
       <p class="err" id="err" role="alert"></p>
-      <div><button class="cta" type="submit">Generar mi registro</button></div>
+      <div><button class="cta" type="submit" id="sendBtn">Enviar mi registro</button></div>
     </form>
     <div class="out" id="out" hidden>
-      <p>Envía este registro y tu comprobante por WhatsApp al <b>+593 98 187 2561</b> para confirmar tu cupo.</p>
+      <p id="outMsg">Registro recibido. Te escribimos por WhatsApp para confirmar tu cupo. Si quieres acelerar, envía también tu comprobante al <b>+593 98 187 2561</b>.</p>
       <pre id="msg"></pre>
       <div class="cta-row"><a class="cta" id="waSend" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a><button class="cta ghost" type="button" id="copyMsg">Copiar registro</button></div>
     </div>
@@ -551,24 +636,43 @@ async function copy(text,btn,ok){
   try{await navigator.clipboard.writeText(text);btn.textContent=ok;}
   catch(e){btn.textContent='Selecciona y copia manualmente';}
 }
-document.getElementById('copyAcc').onclick=e=>copy('5930782300',e.currentTarget,'Número copiado');
+document.getElementById('copyAcc').onclick=e=>copy('2208637646',e.currentTarget,'Número copiado');
 
-document.getElementById('form').addEventListener('submit',e=>{
+const REG_URL='https://akbxnksjaehugmbeacws.supabase.co/functions/v1/tsachila-registro';
+document.getElementById('form').addEventListener('submit',async e=>{
   e.preventDefault();
   const g=id=>document.getElementById(id);const err=g('err');
-  const req=['nombre','edad','wa','ciudad','meds','ref'];
+  const req=['nombre','edad','wa','ciudad','meds'];
   const miss=req.find(id=>!g(id).value.trim());
   if(miss){err.textContent='Falta completar: '+g(miss).previousElementSibling.textContent+'.';g(miss).focus();return;}
   if(+g('edad').value<18){err.textContent='Debes tener 18 años o más.';return;}
+  const f=g('comp').files[0];
+  if(!f){err.textContent='Sube la captura del comprobante de transferencia.';g('comp').focus();return;}
+  if(f.size>5*1024*1024){err.textContent='La captura pesa más de 5 MB. Toma otra captura o recórtala.';return;}
   if(!g('a1').checked||!g('a2').checked){err.textContent='Marca las dos autorizaciones para continuar.';return;}
   err.textContent='';
+  const tarifa=CURRENT?CURRENT.name:'';
   const t=['REGISTRO · Ayahuasca Tsáchila · 6 nov 2026',
    'Nombre: '+g('nombre').value.trim(),'Edad: '+g('edad').value,'WhatsApp: '+g('wa').value.trim(),'Ciudad: '+g('ciudad').value.trim(),
    'Medicamentos: '+g('meds').value.trim(),'Salud: '+(g('salud').value.trim()||'—'),'Experiencia: '+g('exp').value,
    'Motivo: '+(g('por').value.trim()||'—'),
-   'Tarifa: '+(CURRENT?CURRENT.name+' $'+CURRENT.price:'—'),'Comprobante: '+g('ref').value.trim(),
+   'Tarifa: '+(CURRENT?CURRENT.name+' $'+CURRENT.price:'—'),'Comprobante: '+(g('ref').value.trim()||'adjunto en el formulario'),
    'Autorizo filmación y uso de imagen: Sí','Declaración de salud verdadera: Sí','Requisitos de seguridad: cumple los 6'].join('\n');
+  const fd=new FormData();
+  fd.append('nombre',g('nombre').value);fd.append('edad',g('edad').value);fd.append('whatsapp',g('wa').value);
+  fd.append('ciudad',g('ciudad').value);fd.append('medicamentos',g('meds').value);fd.append('salud',g('salud').value);
+  fd.append('experiencia',g('exp').value);fd.append('motivo',g('por').value);fd.append('tarifa',tarifa);
+  fd.append('comprobante_ref',g('ref').value);fd.append('comprobante',f);fd.append('website',g('website').value);
+  fd.append('acepta_filmacion','true');fd.append('declara_salud','true');
+  const btn=g('sendBtn');btn.disabled=true;btn.textContent='Enviando…';
+  let saved=false;
+  try{const r=await fetch(REG_URL,{method:'POST',body:fd});const j=await r.json().catch(()=>({}));
+    if(r.ok&&j.ok)saved=true;else err.textContent=(j.error||'No se pudo guardar.')+' Envíanos tu registro por WhatsApp con el botón de abajo.';}
+  catch(x){err.textContent='No hay conexión con el servidor. Envíanos tu registro por WhatsApp con el botón de abajo.';}
+  btn.disabled=false;btn.textContent='Enviar mi registro';
+  g('outMsg').innerHTML=saved?'<b>Registro recibido.</b> Te escribimos por WhatsApp para confirmar tu cupo. Si quieres acelerar, envía también tu comprobante al <b>+593 98 187 2561</b>.':'Envía este registro y la captura de tu comprobante por WhatsApp al <b>+593 98 187 2561</b> para confirmar tu cupo.';
   g('msg').textContent=t;g('out').hidden=false;g('out').scrollIntoView({behavior:'smooth',block:'start'});
+  if(saved)g('form').hidden=true;
   g('copyMsg').onclick=ev=>copy(t,ev.currentTarget,'Registro copiado');
   g('waSend').href='https://wa.me/593981872561?text='+encodeURIComponent(t);
 });
