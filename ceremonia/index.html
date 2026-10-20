@@ -195,6 +195,7 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
         <span class="fact">Vie <b>6 nov</b> → Sáb <b>7 nov</b></span>
         <span class="fact">Solo <b>5 a 10</b> cupos</span>
         <span class="fact">Mayores de <b>18</b></span>
+        <span class="fact">Transporte <b>no incluido</b></span>
       </div>
       <div class="tiers hero-tiers" id="heroTiers" aria-label="Precios por fecha de inscripción"></div>
       <p class="countdown hero-cd" data-countdown></p>
@@ -226,7 +227,7 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
   <div class="col gut">
     <p class="eyebrow">Precio por fecha de inscripción</p>
     <h2 id="h-precio">Mientras antes te inscribes, menos pagas</h2>
-    <p class="muted">Incluye ceremonia, alojamiento en cabaña, fogata, baño de cascada y desayuno. El precio sube en cada fecha y las inscripciones cierran el miércoles 4 de noviembre a las 23:59, o antes si se llenan los 10 cupos.</p>
+    <p class="muted">Incluye ceremonia, lugar para dormir, fogata, baño de cascada y desayuno. <b>No incluye transporte</b> hasta la comunidad. El precio sube en cada fecha y las inscripciones cierran el miércoles 4 de noviembre a las 23:59, o antes si se llenan los 10 cupos.</p>
     <div class="tiers" id="tiers"></div>
     <div class="seats">
       <div class="seat-row" id="seats" aria-hidden="true"></div>
@@ -508,6 +509,7 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
       <div class="cta-row"><button class="cta ghost" type="button" id="copyAcc">Copiar número de cuenta</button><button class="cta ghost" type="button" id="copyAll">Copiar todos los datos</button></div>
       <p class="muted" style="font-size:14px">Si tu banco lo pide, pon el email facturasneytorres@gmail.com para que le llegue la copia del pago.</p>
     </div>
+    <p class="muted"><b>El precio no incluye transporte.</b> Cada persona llega por su cuenta a Santo Domingo; te enviamos la ubicación por WhatsApp.</p>
     <p class="muted">El precio que pagas es el de la fecha en que pagas, no el de la fecha en que llenas el formulario.</p>
     <p class="muted">Haz la transferencia y toma captura de pantalla del comprobante. La subes en el paso 3. El cupo se confirma cuando lo verificamos. Máximo 10 personas, por orden de pago.</p>
   </div>
@@ -563,9 +565,9 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
 const CUPOS_TOTAL = 10;
 const CUPOS_TOMADOS = 0;
 const TIERS = [
-  {id:'pionero',  name:'Pionero',        price:77,  until:'2026-10-25T23:59:59-05:00', label:'hasta el dom 25 oct', payphone:''},
-  {id:'regular',  name:'Regular',        price:97,  until:'2026-11-01T23:59:59-05:00', label:'26 oct al dom 1 nov', payphone:''},
-  {id:'ultimo',   name:'Último llamado', price:117, until:'2026-11-04T23:59:59-05:00', label:'2 al mié 4 nov', payphone:''}
+  {id:'pionero',  name:'Pionero',        price:77,  until:'2026-10-25T23:59:59-05:00', label:'hasta el dom 25 oct', payphone:'https://ppls.me/EZAnCHVFoxguaUNdruqeQ'},
+  {id:'regular',  name:'Regular',        price:97,  until:'2026-11-01T23:59:59-05:00', label:'26 oct al dom 1 nov', payphone:'https://ppls.me/XK8Ma3XXBQoRMMZDDPA'},
+  {id:'ultimo',   name:'Último llamado', price:117, until:'2026-11-04T23:59:59-05:00', label:'2 al mié 4 nov', payphone:'https://ppls.me/hbtaS2bo91Q0IahyHTPZhQ'}
 ];
 let CURRENT = null;
 (function pricing(){
