@@ -163,6 +163,14 @@ form{display:grid;gap:14px}
 .seat-row i{height:10px;border-radius:99px;background:var(--moss)}
 .seat-row i.taken{background:var(--achiote)}
 .countdown{font-family:var(--mono);font-size:14px;color:var(--bone);background:var(--leaf);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-variant-numeric:tabular-nums}
+.hero-tiers{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-width:640px}
+.hero-tiers .tier{padding:12px 12px 10px;background:rgba(20,30,24,.78);backdrop-filter:blur(6px)}
+.hero-tiers .tier .pr{font-size:clamp(28px,7vw,40px)}
+.hero-tiers .tier .dt{font-size:12px}
+.hero-tiers .tier.now{background:linear-gradient(160deg,rgba(59,29,18,.92),rgba(20,30,24,.85) 70%)}
+.hero-tiers .tier.now::after{top:auto;bottom:10px;right:10px;font-size:10px;padding:2px 7px;content:"Hoy"}
+.hero-cd{max-width:640px;background:rgba(20,30,24,.78);backdrop-filter:blur(6px)}
+@media (max-width:420px){.hero-tiers .tier .nm{font-size:10px;letter-spacing:.06em}}
 .closed{padding:20px;border-radius:14px;border:1px solid var(--stop);background:var(--achiote-soft);color:var(--bone)}
 .notice h3{font-size:19px}
 footer{color:var(--mist);font-size:13px;padding-block:32px}
@@ -186,9 +194,10 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
         <span class="fact">Solo <b>5 a 10</b> cupos</span>
         <span class="fact">Mayores de <b>18</b></span>
       </div>
+      <div class="tiers hero-tiers" id="heroTiers" aria-label="Precios por fecha de inscripción"></div>
+      <p class="countdown hero-cd" data-countdown></p>
       <div class="cta-row">
         <a class="cta" href="#registro">Ver si puedo ir y reservar</a>
-        <span class="price-tag"><span data-price>$77</span><small data-tiername>precio pionero</small></span>
       </div>
     </div>
   </div>
@@ -451,12 +460,14 @@ let CURRENT = null;
   const closed = idx === -1 || full;
   CURRENT = closed ? null : TIERS[idx];
   // tier cards
-  const box = document.getElementById('tiers');
-  TIERS.forEach((t,i)=>{
-    const d=document.createElement('div');
-    d.className='tier'+(i===idx&&!closed?' now':'')+((idx===-1||i<idx)?' past':'');
-    d.innerHTML='<span class="nm">'+t.name+'</span><span class="pr">$'+t.price+'</span><span class="dt">'+t.label+'</span>';
-    box.appendChild(d);
+  ['tiers','heroTiers'].forEach(id=>{
+    const box = document.getElementById(id);
+    TIERS.forEach((t,i)=>{
+      const d=document.createElement('div');
+      d.className='tier'+(i===idx&&!closed?' now':'')+((idx===-1||i<idx)?' past':'');
+      d.innerHTML='<span class="nm">'+t.name+'</span><span class="pr">$'+t.price+'</span><span class="dt">'+t.label+'</span>';
+      box.appendChild(d);
+    });
   });
   // seats
   const sr=document.getElementById('seats');
@@ -467,6 +478,7 @@ let CURRENT = null;
     document.querySelectorAll('[data-price]').forEach(e=>e.textContent='Cerrado');
     document.querySelectorAll('[data-tiername]').forEach(e=>e.textContent=full?'cupos llenos':'inscripciones cerradas');
     document.getElementById('countdown').textContent = full ? 'Se llenaron los 10 cupos. Gracias.' : 'Las inscripciones cerraron el 4 de noviembre.';
+    document.querySelectorAll('[data-countdown]').forEach(e=>e.textContent=document.getElementById('countdown').textContent);
     const reg=document.getElementById('registro');
     reg.querySelector('.col').innerHTML='<p class="eyebrow">Inscripciones</p><h2>Inscripciones cerradas</h2><div class="closed">'+(full?'Se llenaron los 10 cupos para esta ceremonia.':'La fecha límite para inscribirse fue el miércoles 4 de noviembre.')+' Escríbenos si quieres estar en la próxima.</div>';
     document.getElementById('dockNote').textContent=full?'Cupos llenos':'Inscripciones cerradas';
@@ -487,6 +499,8 @@ let CURRENT = null;
     const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
     const left=(d?d+' d ':'')+h+' h '+m+' min';
     cd.textContent = next ? 'El precio sube a $'+next.price+' en '+left : 'Las inscripciones cierran en '+left;
+    document.querySelectorAll('[data-countdown]').forEach(e=>e.textContent = next ? 'Hoy $'+CURRENT.price+' · sube a $'+next.price+' en '+left+' · inscripciones cierran el 4 nov' : 'Último precio · cierra en '+left);
+    const dn=document.getElementById('dockNote'); if(dn) dn.textContent = next ? 'Sube a $'+next.price+' en '+left : 'Cierra en '+left;
   }
   tick(); setInterval(tick,30000);
 })();
