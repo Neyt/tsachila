@@ -509,12 +509,12 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
     <h2 id="h-pay">Reserva tu cupo con <span data-price>$77</span></h2>
     <div class="notice" id="ppBox" hidden>
       <h3>Paga con tarjeta de crédito o débito</h3>
-      <p class="muted">Pago seguro con PayPhone. Se abre en otra pestaña: cuando termines, toma captura del comprobante y vuelve aquí para el paso 3.</p>
+      <p class="muted">Pago seguro con PayPhone. Se abre en otra pestaña: cuando termines, anota el número de transacción y vuelve aquí para el paso 3.</p>
       <div class="cta-row"><a class="cta" id="ppLink" href="#" target="_blank" rel="noopener">Pagar <span data-price>$77</span> con PayPhone ↗</a></div>
     </div>
     <p class="muted"><b>El precio no incluye transporte.</b> Cada persona llega por su cuenta a Santo Domingo; te enviamos la ubicación por WhatsApp.</p>
     <p class="muted">El precio que pagas es el de la fecha en que pagas, no el de la fecha en que llenas el formulario.</p>
-    <p class="muted">Toma captura de pantalla del comprobante de PayPhone. La subes en el paso 3. El cupo se confirma cuando lo verificamos. Máximo 10 personas, por orden de pago.</p>
+    <p class="muted">Anota el número de transacción que te muestra PayPhone. Lo escribes en el paso 3. El cupo se confirma cuando lo verificamos. Máximo 10 personas, por orden de pago.</p>
   </div>
 </section>
 
@@ -536,8 +536,7 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
       <div class="field"><label for="exp">¿Has tomado ayahuasca antes?</label>
         <select id="exp"><option>Es mi primera vez</option><option>Sí, una vez</option><option>Sí, varias veces</option></select></div>
       <div class="field"><label for="por">¿Por qué quieres vivir esta ceremonia?</label><textarea id="por" rows="2"></textarea></div>
-      <div class="field"><label for="comp">Captura del comprobante de pago (foto o PDF, máx. 5 MB)</label><input id="comp" type="file" accept="image/*,application/pdf" required></div>
-      <div class="field"><label for="ref">Número de transacción de PayPhone (opcional)</label><input id="ref"></div>
+      <div class="field"><label for="ref">Número de transacción de PayPhone</label><input id="ref" inputmode="numeric" placeholder="Ej. 92635366" required></div>
       <div class="hp" aria-hidden="true"><label for="website">No llenar</label><input id="website" tabindex="-1" autocomplete="off"></div>
       <label class="agree"><input type="checkbox" id="a1"><span>Autorizo ser filmado/a y entrevistado/a antes y después de la ceremonia, y el uso de mi imagen y voz en el documental y sus promociones.</span></label>
       <label class="agree"><input type="checkbox" id="a2"><span>Declaro que la información de salud y medicamentos es verdadera y que participo de forma voluntaria y bajo mi responsabilidad.</span></label>
@@ -545,7 +544,7 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
       <div><button class="cta" type="submit" id="sendBtn">Enviar mi registro</button></div>
     </form>
     <div class="out" id="out" hidden>
-      <p id="outMsg">Registro recibido. Te escribimos por WhatsApp para confirmar tu cupo. Si quieres acelerar, envía también tu comprobante al <b>+593 98 187 2561</b>.</p>
+      <p id="outMsg">Registro recibido. Te escribimos por WhatsApp para confirmar tu cupo. Si quieres acelerar, escríbenos al <b>+593 98 187 2561</b>.</p>
       <pre id="msg"></pre>
       <div class="cta-row"><a class="cta" id="waSend" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a><button class="cta ghost" type="button" id="copyMsg">Copiar registro</button></div>
     </div>
@@ -691,9 +690,7 @@ document.getElementById('form').addEventListener('submit',async e=>{
   const miss=req.find(id=>!g(id).value.trim());
   if(miss){err.textContent='Falta completar: '+g(miss).previousElementSibling.textContent+'.';g(miss).focus();return;}
   if(+g('edad').value<18){err.textContent='Debes tener 18 años o más.';return;}
-  const f=g('comp').files[0];
-  if(!f){err.textContent='Sube la captura del comprobante de pago.';g('comp').focus();return;}
-  if(f.size>5*1024*1024){err.textContent='La captura pesa más de 5 MB. Toma otra captura o recórtala.';return;}
+  if(!g('ref').value.trim()){err.textContent='Escribe el número de transacción que te dio PayPhone.';g('ref').focus();return;}
   if(!g('a1').checked||!g('a2').checked){err.textContent='Marca las dos autorizaciones para continuar.';return;}
   err.textContent='';
   const tarifa=CURRENT?CURRENT.name:'';
@@ -701,13 +698,13 @@ document.getElementById('form').addEventListener('submit',async e=>{
    'Nombre: '+g('nombre').value.trim(),'Edad: '+g('edad').value,'WhatsApp: '+g('wa').value.trim(),'Ciudad: '+g('ciudad').value.trim(),
    'Medicamentos: '+g('meds').value.trim(),'Salud: '+(g('salud').value.trim()||'—'),'Experiencia: '+g('exp').value,
    'Motivo: '+(g('por').value.trim()||'—'),
-   'Tarifa: '+(CURRENT?CURRENT.name+' $'+CURRENT.price:'—'),'Comprobante: '+(g('ref').value.trim()||'adjunto en el formulario'),
+   'Tarifa: '+(CURRENT?CURRENT.name+' $'+CURRENT.price:'—'),'Transacción PayPhone: '+g('ref').value.trim(),
    'Autorizo filmación y uso de imagen: Sí','Declaración de salud verdadera: Sí','Requisitos de seguridad: cumple los 6'].join('\n');
   const fd=new FormData();
   fd.append('nombre',g('nombre').value);fd.append('edad',g('edad').value);fd.append('whatsapp',g('wa').value);
   fd.append('ciudad',g('ciudad').value);fd.append('medicamentos',g('meds').value);fd.append('salud',g('salud').value);
   fd.append('experiencia',g('exp').value);fd.append('motivo',g('por').value);fd.append('tarifa',tarifa);
-  fd.append('comprobante_ref',g('ref').value);fd.append('comprobante',f);fd.append('website',g('website').value);
+  fd.append('comprobante_ref',g('ref').value);fd.append('website',g('website').value);
   fd.append('acepta_filmacion','true');fd.append('declara_salud','true');
   const btn=g('sendBtn');btn.disabled=true;btn.textContent='Enviando…';
   let saved=false;
@@ -715,7 +712,7 @@ document.getElementById('form').addEventListener('submit',async e=>{
     if(r.ok&&j.ok)saved=true;else err.textContent=(j.error||'No se pudo guardar.')+' Envíanos tu registro por WhatsApp con el botón de abajo.';}
   catch(x){err.textContent='No hay conexión con el servidor. Envíanos tu registro por WhatsApp con el botón de abajo.';}
   btn.disabled=false;btn.textContent='Enviar mi registro';
-  g('outMsg').innerHTML=saved?'<b>Registro recibido.</b> Te escribimos por WhatsApp para confirmar tu cupo. Si quieres acelerar, envía también tu comprobante al <b>+593 98 187 2561</b>.':'Envía este registro y la captura de tu comprobante por WhatsApp al <b>+593 98 187 2561</b> para confirmar tu cupo.';
+  g('outMsg').innerHTML=saved?'<b>Registro recibido.</b> Te escribimos por WhatsApp para confirmar tu cupo. Si quieres acelerar, escríbenos al <b>+593 98 187 2561</b>.':'Envía este registro por WhatsApp al <b>+593 98 187 2561</b> para confirmar tu cupo.';
   g('msg').textContent=t;g('out').hidden=false;g('out').scrollIntoView({behavior:'smooth',block:'start'});
   if(saved)g('form').hidden=true;
   g('copyMsg').onclick=ev=>copy(t,ev.currentTarget,'Registro copiado');
