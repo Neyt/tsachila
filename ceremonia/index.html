@@ -498,12 +498,15 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
       <h3>Con transferencia bancaria</h3>
       <dl class="bank">
         <dt>Banco</dt><dd>Banco Pichincha</dd>
-        <dt>Tipo</dt><dd>Ahorros</dd>
-        <dt>Cuenta</dt><dd>2208637646</dd>
+        <dt>Tipo de cuenta</dt><dd>Ahorros</dd>
+        <dt>Número</dt><dd>2208637646</dd>
         <dt>Titular</dt><dd>Ney José Torres Hurtado</dd>
+        <dt>Cédula</dt><dd>1712486677</dd>
+        <dt>Email</dt><dd>facturasneytorres@gmail.com</dd>
         <dt>Monto</dt><dd data-price-full>$77,00</dd>
       </dl>
-      <div class="cta-row"><button class="cta ghost" type="button" id="copyAcc">Copiar número de cuenta</button></div>
+      <div class="cta-row"><button class="cta ghost" type="button" id="copyAcc">Copiar número de cuenta</button><button class="cta ghost" type="button" id="copyAll">Copiar todos los datos</button></div>
+      <p class="muted" style="font-size:14px">Si tu banco lo pide, pon el email facturasneytorres@gmail.com para que le llegue la copia del pago.</p>
     </div>
     <p class="muted">El precio que pagas es el de la fecha en que pagas, no el de la fecha en que llenas el formulario.</p>
     <p class="muted">Haz la transferencia y toma captura de pantalla del comprobante. La subes en el paso 3. El cupo se confirma cuando lo verificamos. Máximo 10 personas, por orden de pago.</p>
@@ -663,6 +666,7 @@ async function copy(text,btn,ok){
   catch(e){btn.textContent='Selecciona y copia manualmente';}
 }
 document.getElementById('copyAcc').onclick=e=>copy('2208637646',e.currentTarget,'Número copiado');
+document.getElementById('copyAll').onclick=e=>copy('Banco Pichincha\nCuenta de ahorros 2208637646\nTitular: Ney José Torres Hurtado\nCédula: 1712486677\nEmail: facturasneytorres@gmail.com',e.currentTarget,'Datos copiados');
 
 const REG_URL='https://akbxnksjaehugmbeacws.supabase.co/functions/v1/tsachila-registro';
 document.getElementById('form').addEventListener('submit',async e=>{
