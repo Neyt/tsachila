@@ -198,6 +198,7 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
       <p class="countdown hero-cd" data-countdown></p>
       <div class="cta-row">
         <a class="cta" href="#registro">Ver si puedo ir y reservar</a>
+        <a class="cta ghost" href="https://wa.me/593981872561?text=Hola%2C%20quiero%20info%20de%20la%20ceremonia%20de%20ayahuasca%20Ts%C3%A1chila%20del%206%20de%20noviembre" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
       </div>
     </div>
   </div>
@@ -425,14 +426,14 @@ footer{color:var(--mist);font-size:13px;padding-block:32px}
       <div><button class="cta" type="submit">Generar mi registro</button></div>
     </form>
     <div class="out" id="out" hidden>
-      <p>Envía este registro y la foto del comprobante por WhatsApp a Ney Torres para confirmar tu cupo.</p>
+      <p>Envía este registro y tu comprobante por WhatsApp al <b>+593 98 187 2561</b> para confirmar tu cupo.</p>
       <pre id="msg"></pre>
-      <div class="cta-row"><button class="cta" type="button" id="copyMsg">Copiar registro</button></div>
+      <div class="cta-row"><a class="cta" id="waSend" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a><button class="cta ghost" type="button" id="copyMsg">Copiar registro</button></div>
     </div>
   </div>
 </section>
 
-<footer class="gut"><div class="col">Retiro con la comunidad Tsáchila · Documental Tsáchila · 2026 · Fotos y video: Carlos Becerra</div></footer>
+<footer class="gut"><div class="col">Retiro con la comunidad Tsáchila · Documental Tsáchila · 2026 · Fotos y video: Carlos Becerra<br>Información: WhatsApp <a href="https://wa.me/593981872561?text=Hola%2C%20quiero%20info%20de%20la%20ceremonia%20de%20ayahuasca%20Ts%C3%A1chila%20del%206%20de%20noviembre" target="_blank" rel="noopener">+593 98 187 2561</a></div></footer>
 
 <nav class="dock gut" aria-label="Reserva">
   <div class="col">
@@ -569,6 +570,7 @@ document.getElementById('form').addEventListener('submit',e=>{
    'Autorizo filmación y uso de imagen: Sí','Declaración de salud verdadera: Sí','Requisitos de seguridad: cumple los 6'].join('\n');
   g('msg').textContent=t;g('out').hidden=false;g('out').scrollIntoView({behavior:'smooth',block:'start'});
   g('copyMsg').onclick=ev=>copy(t,ev.currentTarget,'Registro copiado');
+  g('waSend').href='https://wa.me/593981872561?text='+encodeURIComponent(t);
 });
 </script>
 
